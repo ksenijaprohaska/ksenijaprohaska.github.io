@@ -2,9 +2,63 @@
 <html>
   <head>
     <title>Ksenija Prohaska</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/load-image.js"></script>
+    <script type="text/javascript" src="./js/bootstrap-image-gallery.min.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/bootstrap-image-gallery.min.css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
   </head>
-  <body>
-    <center>Hello World!</center>
+  <body class="inverse">
+    <div class="container">
+      <div class="row">
+        <div class="span5 leftnav">
+          <h1>Ksenija Prohaska</h1>
+          <div align="justify">
+            <p>Ksenija Prohaska was born in Split (Croatia). She graduated from the University of Economic Science in her hometown of Rijeka, a major in English, German and Italian. She then moved to Zagreb to study at the Academy of Theatre and Motion pictures, where she graduated at the top of her class.</p>
+            <p>While still studying at the Academy, she started intensive work in the Croatian National Theatre and in the course of seven years she played 22 different roles, mostly classics such as Greek Tragedies, Shakespeare, Goldoni, Ibsen, Strindberg, Lorca and so on.</p>
+            <p>In 1987 she went to Hollywood where she played in the theatre, TV and motion pictures. For the first time she played the role of Marlene Dietrich in Bary Levinson's Bugsy (1991) opposite great actors such as Warren Beatty, Joe Mantegna, Ben Kingsley and Harvey Keitel. In Hollywood and Europe she played in 13 motion pictures and many TV series. In 1999 she came back to Croatia and became a member of the Croatian National Theatre in Split. </p>
+            <p>Performing as "Marlene Dietrich", Ksenija has received standing ovations in 17 countries. She has translated and performed the show in English, Italian, Spanish and Croatian; singing in English, German and French. In 2006 at Mittelfest in Cividale, one of Italy's most prestigious theatre festivals, the reviews were nothing short of brilliant, culminating in her win of the coveted "Adelaide Ristori" award. </p>
+            <p>In the past 14 years she was a winner of many major national festivals and became the most awarded theatrical actress in Croatia for her performances, including "Marlene Dietrich", "Edith Piaf", "Billie Holiday", "The Rose Tattoo", "Filumena Marturano", "The Tempest" (Ariel),  "Mother Courage" (Mother Courage), "Hamlet" (Gertrude) and "Who's Afraid of Virginia Wolfe" (Martha). Ksenija continues to receive rave reviews in performances all over the  world. </p>
+          </div>
+        </div>
+
+        <div class="span7">
+          <img src="./images/ksenija.jpg" alt="ksenija"/>
+          <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
+            <a href="./images/21.jpg" title="Billie Holiday" data-gallery="gallery">Billie Holiday</a>
+            <a href="./images/Marlene01.jpg" title="Marlene Dietrich War Scene" data-gallery="gallery">Marlene Dietrich War Scene</a>
+            <a href="./images/Marlene02.jpg" title="Marlene Dietrich Mienblondes Baby" data-gallery="gallery">Marlene Dietrich Mienblondes Baby</a>
+            <a href="./images/Marlene03.jpg" title="Marlene Dietrich Cigarette" data-gallery="gallery">Marlene Dietrich Cigarette</a>
+            <a href="./images/Tetovirana_ruza.jpg" title="The Rose tattoo" data-gallery="gallery">The Rose tattoo</a>
+            <a href="./images/billie_holiday.jpg" title="Billie Holiday The Poster" data-gallery="gallery">Billie Holiday The Poster</a>
+            <a href="./images/ksenija_glorija.jpg" title="Marlene Dietrich as Lola" data-gallery="gallery">Marlene Dietrich as Lola</a>
+            <a href="./images/ksenija.jpg" title="Ksenija Prohaska" data-gallery="gallery">Ksenija Prohaska</a>
+            <a href="./images/ksenija17.jpg" title="Marlene Cane" data-gallery="gallery">Marlene Cane</a>
+            <a href="./images/ksenija6.jpg" title="Valentines Day Concert" data-gallery="gallery">Valentines Day Concert</a>
+            <a href="./images/ksenija8.jpg" title="Bugsy" data-gallery="gallery">Bugsy</a>
+            <a href="./images/l.jpg" title="Filumena Marturno" data-gallery="gallery">Filumena Marturno</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
+        <div class="modal-header">
+          <a class="close" data-dismiss="modal">&times;</a>
+          <h3 class="modal-title"></h3>
+        </div>
+        <div class="modal-body"><div class="modal-image"></div></div>
+        <div class="modal-footer">
+          <a class="btn btn-success modal-play modal-slideshow" data-slideshow="5000"><i class="icon-play icon-white"></i> Slideshow</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 
