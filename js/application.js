@@ -1,8 +1,8 @@
-var Song = window.song = function(file) {
+var Song = window.song = function(file, container) {
   var self = this;
 
   this.$clear = $('<div class="clearfix"></div>');
-  this.$container = $('#songs');
+  this.$container = $(container);
   this.$link = $('<a></a>');
   this.file = file;
 
@@ -40,10 +40,29 @@ var Thumbnail = window.Thumbnail = function($link) {
 var thumbnails = window.thumbnails = [];
 
 var song_files = [
-  '01 Autumn Leaves.mp3',
-  '02 La\' vie on rose.mp3'
+  'Autumn Leaves.mp3',
+  'La\' vie on rose.mp3',
+  'Non,je ne regrette rien.mp3',
+  'Milord.mp3',
+  'Lily Marlene.mp3',
+  'Ich habe noch einen koffer in Berlin.mp3',
+  'I wish you love.mp3',
+  'The portrait of my love.mp3',
+  'Na me couhan.mp3',
+  'Djelem,djelem.mp3'
 ];
+
+var poetry_files = [
+  'I am not a woman.mp3',
+  'If I call you my love.mp3',
+  'La Exis, la exis novento siete punto nueve.mp3',
+  'I understand only tenderness.mp3',
+  'The artist.mp3',
+  'Elat Jewish market.mp3'
+];
+
 var songs = window.songs = [];
+var poetry = window.poetry = [];
 
 $(function () {
   var $gallery = $('#gallery');
@@ -53,7 +72,11 @@ $(function () {
   });
 
   $.each(song_files, function() {
-    songs.push(new Song(this));
+    songs.push(new Song(this, '#songs'));
+  });
+
+  $.each(poetry_files, function() {
+    poetry.push(new Song(this, '#poetry'));
   });
 
   var $player = $('<script></script>');
@@ -61,5 +84,5 @@ $(function () {
   $player.attr('type', 'text/javascript')
          .attr('src', "http://webplayer.yahooapis.com/player.js");
 
-  $('body').append($player);
+  $('head').append($player);
 });
