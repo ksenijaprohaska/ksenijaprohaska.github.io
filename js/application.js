@@ -1,6 +1,7 @@
 var Song = window.song = function(file) {
   var self = this;
 
+  this.$clear = $('<div class="clearfix"></div>');
   this.$container = $('#songs');
   this.$link = $('<a></a>');
   this.file = file;
@@ -9,7 +10,9 @@ var Song = window.song = function(file) {
       .attr('href', 'http://ksenijaprohaska.github.io/audio/'+file)
       .text(file);
 
-  this.$container.append(this.$link);
+  this.$container
+      .append(this.$link)
+      .append(this.$clear);
 }
 
 var Thumbnail = window.Thumbnail = function($link) {
@@ -36,7 +39,10 @@ var Thumbnail = window.Thumbnail = function($link) {
 
 var thumbnails = window.thumbnails = [];
 
-var song_files = ['01_Autumn_Leaves.mp3'];
+var song_files = [
+  '01_Autumn_Leaves.mp3',
+  '02 La\' vie on rose.mp3'
+];
 var songs = window.songs = [];
 
 $(function () {
