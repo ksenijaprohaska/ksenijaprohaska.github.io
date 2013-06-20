@@ -8,7 +8,7 @@ var Song = window.song = function(file) {
 
   this.$link
       .attr('href', 'http://ksenijaprohaska.github.io/audio/'+file)
-      .text(file);
+      .text(this.file.replace('.mp3', ''));
 
   this.$container
       .append(this.$link)
@@ -40,7 +40,7 @@ var Thumbnail = window.Thumbnail = function($link) {
 var thumbnails = window.thumbnails = [];
 
 var song_files = [
-  '01_Autumn_Leaves.mp3',
+  '01 Autumn Leaves.mp3',
   '02 La\' vie on rose.mp3'
 ];
 var songs = window.songs = [];
