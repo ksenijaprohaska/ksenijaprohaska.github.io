@@ -7,7 +7,7 @@ var Song = window.song = function(file, container) {
   this.file = file;
 
   this.$link
-      .attr('href', 'http://ksenijaprohaska.github.io/audio/'+file)
+      .attr('href', 'http://'+window.location.host+'/audio/'+file)
       .text(this.file.replace('.mp3', ''));
 
   this.$container
