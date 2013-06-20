@@ -1,3 +1,17 @@
+var Song = window.song = function(file) {
+  var self = this;
+
+  this.$container = $('#songs');
+  this.$link = $('<a></a>');
+  this.file = file;
+
+  this.$link
+      .attr('href', 'http://ksenijaprohaska.github.io/audio/'+file)
+      .text(file);
+
+  this.$container.append(this.$link);
+}
+
 var Thumbnail = window.Thumbnail = function($link) {
   var self = this;
 
@@ -22,10 +36,24 @@ var Thumbnail = window.Thumbnail = function($link) {
 
 var thumbnails = window.thumbnails = [];
 
+var song_files = ['01_Autumn_Leaves.mp3'];
+var songs = window.songs = [];
+
 $(function () {
   var $gallery = $('#gallery');
 
   $gallery.children().each(function() {
     thumbnails.push(new Thumbnail($(this)));
   });
+
+  $.each(song_files, function() {
+    songs.push(new Song(this));
+  });
+
+  var $player = $('<script></script>');
+
+  $player.attr('type', 'text/javascript')
+         .attr('src', "http://webplayer.yahooapis.com/player.js");
+
+  $('body').append($player);
 });
